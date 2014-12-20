@@ -28,7 +28,7 @@ def parallelRun(N):
 	results = []
 
 	for i in xrange(0, N):
-		r = pool.apply_async(outer, [N])
+		r = pool.apply_async(outer, [i])
 		results.append(r)
 
 	for r in results:
